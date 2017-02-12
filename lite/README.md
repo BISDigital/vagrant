@@ -44,10 +44,17 @@ properly use the RHEL7 boxes.
 ```
 $ vagrant plugin list
 vagrant-dotvm (0.39.0)
-vagrant-registration (1.2.1)
+  - Version Constraint: > 0
+vagrant-registration (1.3.1)
+  - Version Constraint: > 0
 vagrant-reload (0.0.1)
-vagrant-service-manager (1.0.2)
-vagrant-share (1.1.5, system)
+  - Version Constraint: > 0
+vagrant-service-manager (1.5.0)
+  - Version Constraint: > 0
+vagrant-share (1.1.6)
+  - Version Constraint: > 0
+vagrant-sshfs (1.3.0)
+  - Version Constraint: > 0
 ```
 
 ## Preparing VirtualBox
@@ -62,17 +69,17 @@ Host-only Networks. Create a new network named vboxnet0 with the following:
 
 ## Usage
 
-By default, commands are directed toward the Kubernetes master box. Therefore,
+By default, commands are directed toward the IPA master box. Therefore,
 Vagrant ssh access does not need to be specified to the master.
 
 ```
 $ vagrant group up mgmt
 ...
-$ ansible-playbook -u vagrant -i hosts/lite -l lite-mgmt-ipa,lite-mgmt-openshift lite-platforms.yaml
+$ ansible-playbook -u vagrant -i hosts/beis -l beis-mgmt-ipa,beis-mgmt-openshift beis-platforms.yaml
 ...
-$ ansible-playbook -u vagrant -i hosts/lite -l lite-mgmt-ipa lite-ipaserver.yaml
+$ ansible-playbook -u vagrant -i hosts/beis -l beis-mgmt-ipa beis-ipaserver.yaml
 ...
-$ ansible-playbook -u vagrant -i hosts/lite-mgmt-openshift lite-openshift.yaml
+$ ansible-playbook -u vagrant -i hosts/beis-mgmt-openshift beis-openshift.yaml
 ```
 
 Once you have created the environment, you will notice Kubernetes functions as
