@@ -28,12 +28,13 @@
 
 - nick: ukbeisipa01
   name: ukbeisipa01.licensing.service.trade.gov.uk.test
+  primary: true
   box: "%project.box%"
   groups:
     - ipa
     - mgmt
   memory: 1024
-  cpus: 1
+  cpus: 2
   box_check_update: true
   autostart: true
   networks:
@@ -47,6 +48,9 @@
   provision:
     - type: shell
       path: "%host.files_dir%/dns.sh"
+    - type: shell
+      inline: "ifup eth1 || /bin/true"
+      run: always
 
 - nick: ukbeisipa02
   name: ukbeisipa02.licensing.service.trade.gov.uk.test
@@ -55,7 +59,7 @@
     - ipa
     - mgmt
   memory: 1024
-  cpus: 1
+  cpus: 2
   box_check_update: true
   autostart: true
   networks:
@@ -69,3 +73,6 @@
   provision:
     - type: shell
       path: "%host.files_dir%/dns.sh"
+    - type: shell
+      inline: "ifup eth1 || /bin/true"
+      run: always

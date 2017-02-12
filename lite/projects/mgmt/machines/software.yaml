@@ -29,13 +29,13 @@
 
 # Ansible
 - nick: ansible
-  primary: true
+#  primary: true
   box: "%project.box%"
   groups:
   - all
   - software
   - ansible
-  name: ansible.lite.bis.gov.uk
+  name: ansible.licensing.service.trade.gov.uk.test
   memory: 1024
   cpus: 2
   box_check_update: true
@@ -49,20 +49,23 @@
     mask: 255.255.0.0
     interface: "%project.interface%"
   provision:
-  - type: shell
-    path: "%host.files_dir%/keys.sh"
-  - type: shell
-    path: "%host.files_dir%/provision_ansible.sh"
-    env:
-      SUB_USERNAME: "%global.rh_username%"
-      SUB_PASSWORD: "%global.rh_password%"
+    - type: shell
+      path: "%host.files_dir%/keys.sh"
+    - type: shell
+      path: "%host.files_dir%/provision_ansible.sh"
+      env:
+        SUB_USERNAME: "%global.rh_username%"
+        SUB_PASSWORD: "%global.rh_password%"
+    - type: shell
+      inline: "ifup eth1 || /bin/true"
+      run: always
 
 # Docker / Yum
 - nick: repo1
   groups:
   - all
   - software
-  name: repo1.lite.bis.gov.uk
+  name: repo1.licensing.service.trade.gov.uk.test
   box: "%project.box%"
   memory: 2048
   cpus: 2
@@ -77,5 +80,8 @@
     mask: 255.255.0.0
     interface: "%project.interface%"
   provision:
-  - type: shell
-    path: "%host.files_dir%/provision_repo1.sh"
+    - type: shell
+      path: "%host.files_dir%/provision_repo1.sh"
+    - type: shell
+      inline: "ifup eth1 || /bin/true"
+      run: always

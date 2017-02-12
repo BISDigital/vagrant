@@ -28,7 +28,7 @@
 
 - nick: k8smaster
   name: k8smaster.devcluster.lite.bis.gov.uk
-  primary: true
+#  primary: true
   box: "%project.box%"
   groups:
   - kubernetes

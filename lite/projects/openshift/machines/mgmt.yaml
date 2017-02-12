@@ -28,7 +28,7 @@
 
 - nick: ukbeismom01
   name: ukbeismom01.licensing.service.trade.gov.uk.test
-  primary: true
+#  primary: true
   box: "%project.box%"
   groups:
   - os-mgmt
@@ -45,6 +45,10 @@
     interface: "%project.interface%"
   hosts: "%project.hosts%"
   authorized_keys: "%global.authorized_keys%"
+  provision:
+    - type: shell
+      inline: "ifup eth1 || /bin/true"
+      run: always
 
 - nick: ukbeismon01
   name: ukbeismon01.licensing.service.trade.gov.uk.test
@@ -64,6 +68,10 @@
     interface: "%project.interface%"
   hosts: "%project.hosts%"
   authorized_keys: "%global.authorized_keys%"
+  provision:
+  - type: shell
+    inline: "ifup eth1 || /bin/true"
+    run: always
 
 - nick: ukbeismon02
   name: ukbeismon02.licensing.service.trade.gov.uk.test
@@ -83,3 +91,7 @@
     interface: "%project.interface%"
   hosts: "%project.hosts%"
   authorized_keys: "%global.authorized_keys%"
+  provision:
+    - type: shell
+      inline: "ifup eth1 || /bin/true"
+      run: always
