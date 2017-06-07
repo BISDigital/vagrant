@@ -48,6 +48,8 @@
     - type: shell
       inline: "ifup eth1 || /bin/true"
       run: always
+    - type: shell
+      path: "%host.files_dir%/gluster_conf.sh"
 
 - nick: ukbeisgls02
   name: ukbeisgls02.licensing.service.trade.gov.uk.test
@@ -70,3 +72,5 @@
     - type: shell
       inline: "ifup eth1 || /bin/true"
       run: always
+    - type: shell
+      path: "%host.files_dir%/gluster_conf.sh"
