@@ -26,7 +26,7 @@
 
 # These are OpenShift app project variables
 
-box: bis/rhel7
+box: secnix/rhel7
 interface: vboxnet0
 natnet: 192.168.123.0/24
 hosts:
@@ -34,6 +34,10 @@ hosts:
     host: ukbeisipa01.licensing.service.trade.gov.uk.test ukbeisipa01
   - ip: 10.100.100.12
     host: ukbeisipa02.licensing.service.trade.gov.uk.test ukbeisipa01
+  - ip: 10.100.100.13
+    host: ukbeisgls01.licensing.service.trade.gov.uk.test ukbeisgls01
+  - ip: 10.100.100.14
+    host: ukbeisgls02.licensing.service.trade.gov.uk.test ukbeisgls02
   - ip: 10.100.100.21
     host: ukbeismom01.licensing.service.trade.gov.uk.test ukbeismom01
   - ip: 10.100.100.22
