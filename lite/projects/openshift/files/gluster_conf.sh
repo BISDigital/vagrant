@@ -26,9 +26,11 @@
 #
 # Install and configure a GlusterFS node with nfs-ganesha
 #
+# http://blog.gluster.org/2015/10/linux-scale-out-nfsv4-using-nfs-ganesha-and-glusterfs-one-step-at-a-time/
 # http://clusterlabs.org/quickstart-redhat.html
 # https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html-single/High_Availability_Add-On_Administration/index.html#s1-clusterconfigure-HAAA
 # https://access.redhat.com/documentation/en-US/Red_Hat_Storage/3/html/Administration_Guide/sect-NFS.html
+# http://gluster.readthedocs.io/en/latest/Administrator%20Guide/NFS-Ganesha%20GlusterFS%20Integration/
 #
 # Author: Justin Cook <jhcook@secnix.com>
 
@@ -39,6 +41,12 @@ set -x
 RUSER="vagrant"
 NODE1="ukbeisgls01"
 NODE2="ukbeisgls02"
+
+# Disable NetworkManger and enable network.service
+systemctl disable NetworkManager
+systemctl stop NetworkManager
+systemctl enable network.service
+systemctl start network.service
 
 # Add the firewall rules even though we will disable it 
 rpm -q firewalld 2>/dev/null
