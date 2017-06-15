@@ -24,8 +24,8 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-- nick: ukbeisalb01
-  name: ukbeisalb01.licensing.service.trade.gov.uk.test
+- nick: uktradealb01
+  name: uktradealb01.licensing.service.trade.gov.uk.test
   box: "%project.box%"
   groups:
     - loadbalancers
@@ -47,8 +47,8 @@
       path: "%host.files_dir%/dns.sh"
       run: always
 
-- nick: ukbeisalb02
-  name: ukbeisalb02.licensing.service.trade.gov.uk.test
+- nick: uktradealb02
+  name: uktradealb02.licensing.service.trade.gov.uk.test
   box: "%project.box%"
   groups:
     - loadbalancers

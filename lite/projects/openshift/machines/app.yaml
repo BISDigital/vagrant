@@ -26,8 +26,8 @@
 
 # This is an Openshift cluster
 
-- nick: ukbeisaom01
-  name: ukbeisaom01.licensing.service.trade.gov.uk.test
+- nick: uktradeaom01
+  name: uktradeaom01.licensing.service.trade.gov.uk.test
 #  primary: true
   box: "%project.box%"
   groups:
@@ -50,8 +50,8 @@
       inline: "ifup eth1 || /bin/true"
       run: always
 
-- nick: ukbeisaon01
-  name: ukbeisaon01.licensing.service.trade.gov.uk.test
+- nick: uktradeaon01
+  name: uktradeaon01.licensing.service.trade.gov.uk.test
   box: "%project.box%"
   groups:
   - os-app
@@ -73,8 +73,8 @@
       inline: "ifup eth1 || /bin/true"
       run: always
 
-- nick: ukbeisaon02
-  name: ukbeisaon02.licensing.service.trade.gov.uk.test
+- nick: uktradeaon02
+  name: uktradeaon02.licensing.service.trade.gov.uk.test
   box: "%project.box%"
   groups:
   - os-app

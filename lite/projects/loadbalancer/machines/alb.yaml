@@ -26,8 +26,8 @@
 
 # This is an HAProxy/keepalived loadbalancer cluster
 
-- nick: ukbeisalb01
-  name: ukbeisalb01.licensing.service.trade.gov.uk.test
+- nick: uktradealb01
+  name: uktradealb01.licensing.service.trade.gov.uk.test
 #  primary: true
   box: "%project.box%"
   groups:
@@ -49,8 +49,8 @@
       inline: "ifup eth1 || /bin/true"
       run: always
 
-- nick: ukbeisalb02
-  name: ukbeisalb02.licensing.service.trade.gov.uk.test
+- nick: uktradealb02
+  name: uktradealb02.licensing.service.trade.gov.uk.test
   box: "%project.box%"
   groups:
   - app-lb

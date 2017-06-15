@@ -26,12 +26,11 @@
 
 # This is an Openshift cluster
 
-- nick: ukbeisgls01
-  name: ukbeisgls01.licensing.service.trade.gov.uk.test
+- nick: uktradegls01
+  name: uktradegls01.licensing.service.trade.gov.uk.test
 #  primary: true
   box: "%project.box%"
   groups:
-  - mgmt
   - gluster
   cpus: 2
   memory: 2048
@@ -51,11 +50,10 @@
     - type: shell
       path: "%host.files_dir%/gluster_conf.sh"
 
-- nick: ukbeisgls02
-  name: ukbeisgls02.licensing.service.trade.gov.uk.test
+- nick: uktradegls02
+  name: uktradegls02.licensing.service.trade.gov.uk.test
   box: "%project.box%"
   groups:
-  - mgmt
   - gluster
   cpus: 2
   memory: 2048
@@ -64,6 +62,29 @@
   - net: private_network
     type: static
     ip: 10.100.100.14
+    mask: 255.255.0.0
+    interface: "%project.interface%"
+  hosts: "%project.hosts%"
+  authorized_keys: "%global.authorized_keys%"
+  provision:
+    - type: shell
+      inline: "ifup eth1 || /bin/true"
+      run: always
+    - type: shell
+      path: "%host.files_dir%/gluster_conf.sh"
+
+- nick: uktradegls03
+  name: uktradegls03.licensing.service.trade.gov.uk.test
+  box: "%project.box%"
+  groups:
+  - gluster
+  cpus: 2
+  memory: 2048
+  natnet: "%global.natnet%"
+  networks:
+  - net: private_network
+    type: static
+    ip: 10.100.100.15
     mask: 255.255.0.0
     interface: "%project.interface%"
   hosts: "%project.hosts%"

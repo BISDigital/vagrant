@@ -75,20 +75,20 @@ Vagrant ssh access does not need to be specified to the master.
 ```
 $ vagrant group up mgmt
 ...
-$ ansible-playbook -u vagrant -i hosts/beis -l beis-mgmt-ipa,beis-mgmt-openshift beis-platforms.yaml
+$ ansible-playbook -u vagrant -i hosts/uktrade -l uktrade-mgmt-ipa,uktrade-mgmt-openshift uktrade-platforms.yaml
 ...
-$ ansible-playbook -u vagrant -i hosts/beis -l beis-mgmt-ipa beis-ipaserver.yaml
+$ ansible-playbook -u vagrant -i hosts/uktrade -l uktrade-mgmt-ipa uktrade-ipaserver.yaml
 ...
-$ ansible-playbook -u vagrant -i hosts/beis-mgmt-openshift beis-openshift.yaml
+$ ansible-playbook -u vagrant -i hosts/uktrade-mgmt-openshift uktrade-openshift.yaml
 ```
 
 Once you have created the environment, you will notice Kubernetes functions as
 a three-node cluster.
 
 ```
-[root@ukbeismom01 ~]# oc get nodes
+[root@uktrademom01 ~]# oc get nodes
 NAME                                              STATUS    AGE
-ukbeismom01.licensing.service.trade.gov.uk.test   Ready     17m
-ukbeismon01.licensing.service.trade.gov.uk.test   Ready     11m
-ukbeismon02.licensing.service.trade.gov.uk.test   Ready     11m
+uktrademom01.licensing.service.trade.gov.uk.test   Ready     17m
+uktrademon01.licensing.service.trade.gov.uk.test   Ready     11m
+uktrademon02.licensing.service.trade.gov.uk.test   Ready     11m
 ```

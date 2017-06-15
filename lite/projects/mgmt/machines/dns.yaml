@@ -26,8 +26,8 @@
 
 # The naming and authentication/authorization servers 
 
-- nick: ukbeisipa01
-  name: ukbeisipa01.licensing.service.trade.gov.uk.test
+- nick: uktradeipa01
+  name: uktradeipa01.licensing.service.trade.gov.uk.test
   primary: true
   box: "%project.box%"
   groups:
@@ -52,8 +52,8 @@
       inline: "ifup eth1 || /bin/true"
       run: always
 
-- nick: ukbeisipa02
-  name: ukbeisipa02.licensing.service.trade.gov.uk.test
+- nick: uktradeipa02
+  name: uktradeipa02.licensing.service.trade.gov.uk.test
   box: "%project.box%"
   groups:
     - ipa

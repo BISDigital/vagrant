@@ -31,32 +31,32 @@ interface: vboxnet0
 natnet: 192.168.123.0/24
 hosts:
   - ip: 10.100.100.11
-    host: ukbeisipa01.licensing.service.trade.gov.uk.test ukbeisipa01
+    host: uktradeipa01.licensing.service.trade.gov.uk.test uktradeipa01
   - ip: 10.100.100.12
-    host: ukbeisipa02.licensing.service.trade.gov.uk.test ukbeisipa01
+    host: uktradeipa02.licensing.service.trade.gov.uk.test uktradeipa01
   - ip: 10.100.100.21
-    host: ukbeismom01.licensing.service.trade.gov.uk.test ukbeismom01
+    host: uktrademom01.licensing.service.trade.gov.uk.test uktrademom01
   - ip: 10.100.100.22
-    host: ukbeismon01.licensing.service.trade.gov.uk.test ukbeismon01
+    host: uktrademon01.licensing.service.trade.gov.uk.test uktrademon01
   - ip: 10.100.100.23
-    host: ukbeismon02.licensing.service.trade.gov.uk.test ukbeismon02
+    host: uktrademon02.licensing.service.trade.gov.uk.test uktrademon02
   - ip: 10.100.1.5
-    host: ukbeisalb01.licensing.service.trade.gov.uk.test ukbeisalb01
+    host: uktradealb01.licensing.service.trade.gov.uk.test uktradealb01
   - ip: 10.100.1.6
-    host: ukbeisalb02.licensing.service.trade.gov.uk.test ukbeisalb02
+    host: uktradealb02.licensing.service.trade.gov.uk.test uktradealb02
   - ip: 10.100.1.21
-    host: ukbeisaom01.licensing.service.trade.gov.uk.test ukbeisaom01
+    host: uktradeaom01.licensing.service.trade.gov.uk.test uktradeaom01
   - ip: 10.100.1.51
-    host: ukbeisaon01.licensing.service.trade.gov.uk.test ukbeisaon01
+    host: uktradeaon01.licensing.service.trade.gov.uk.test uktradeaon01
   - ip: 10.100.1.52
-    host: ukbeisson01.licensing.service.trade.gov.uk.test ukbeisaon02
+    host: uktradeson01.licensing.service.trade.gov.uk.test uktradeaon02
   - ip: 10.100.20.5
-    host: ukbeisslb01.licensing.service.trade.gov.uk.test ukbeisslb01
+    host: uktradeslb01.licensing.service.trade.gov.uk.test uktradeslb01
   - ip: 10.100.20.6
-    host: ukbeisslb02.licensing.service.trade.gov.uk.test ukbeisslb02
+    host: uktradeslb02.licensing.service.trade.gov.uk.test uktradeslb02
   - ip: 10.100.20.21
-    host: ukbeissom01.licensing.service.trade.gov.uk.test ukbeissom01
+    host: uktradesom01.licensing.service.trade.gov.uk.test uktradesom01
   - ip: 10.100.20.51
-    host: ukbeisson01.licensing.service.trade.gov.uk.test ukbeisson01
+    host: uktradeson01.licensing.service.trade.gov.uk.test uktradeson01
   - ip: 10.100.20.52
-    host: ukbeisson01.licensing.service.trade.gov.uk.test ukbeisson02
+    host: uktradeson01.licensing.service.trade.gov.uk.test uktradeson02

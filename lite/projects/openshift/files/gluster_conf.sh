@@ -39,8 +39,8 @@ set -x
 
 # Configurable options
 RUSER="vagrant"
-NODE1="ukbeisgls01"
-NODE2="ukbeisgls02"
+NODE1="uktradegls01"
+NODE2="uktradegls02"
 
 # Disable NetworkManger and enable network.service
 systemctl disable NetworkManager
