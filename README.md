@@ -1,6 +1,6 @@
-# BIS Vagrant
+# UK Trade Vagrant
 
-BIS use Vagrant for tier one development and 12 factor practices. Each project
+UK Trade use Vagrant for tier one development and 12 factor practices. Each project
 directory are self-contained environments. In order to use our Vagrant
 environments, you will need to install some plugins:
 
