@@ -48,9 +48,6 @@
   provision:
     - type: shell
       path: "%host.files_dir%/dns.sh"
-    - type: shell
-      inline: "ifup eth1 || /bin/true"
-      run: always
 
 - nick: uktradeipa02
   name: uktradeipa02.licensing.service.trade.gov.uk.test
@@ -73,6 +70,3 @@
   provision:
     - type: shell
       path: "%host.files_dir%/dns.sh"
-    - type: shell
-      inline: "ifup eth1 || /bin/true"
-      run: always

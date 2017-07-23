@@ -56,9 +56,6 @@
       env:
         SUB_USERNAME: "%global.rh_username%"
         SUB_PASSWORD: "%global.rh_password%"
-    - type: shell
-      inline: "ifup eth1 || /bin/true"
-      run: always
 
 # Docker / Yum
 - nick: repo1
@@ -82,6 +79,3 @@
   provision:
     - type: shell
       path: "%host.files_dir%/provision_repo1.sh"
-    - type: shell
-      inline: "ifup eth1 || /bin/true"
-      run: always

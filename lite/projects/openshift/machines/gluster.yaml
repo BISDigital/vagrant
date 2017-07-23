@@ -45,9 +45,6 @@
   authorized_keys: "%global.authorized_keys%"
   provision:
     - type: shell
-      inline: "ifup eth1 || /bin/true"
-      run: always
-    - type: shell
       path: "%host.files_dir%/gluster_conf.sh"
 
 - nick: uktradegls02
@@ -68,9 +65,6 @@
   authorized_keys: "%global.authorized_keys%"
   provision:
     - type: shell
-      inline: "ifup eth1 || /bin/true"
-      run: always
-    - type: shell
       path: "%host.files_dir%/gluster_conf.sh"
 
 - nick: uktradegls03
@@ -90,8 +84,5 @@
   hosts: "%project.hosts%"
   authorized_keys: "%global.authorized_keys%"
   provision:
-    - type: shell
-      inline: "ifup eth1 || /bin/true"
-      run: always
     - type: shell
       path: "%host.files_dir%/gluster_conf.sh"

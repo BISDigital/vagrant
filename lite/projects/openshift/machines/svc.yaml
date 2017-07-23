@@ -45,10 +45,6 @@
     interface: "%project.interface%"
   hosts: "%project.hosts%"
   authorized_keys: "%global.authorized_keys%"
-  provision:
-    - type: shell
-      inline: "ifup eth1 || /bin/true"
-      run: always
 
 - nick: uktradeson01
   name: uktradeson01.licensing.service.trade.gov.uk.test
@@ -68,10 +64,6 @@
     interface: "%project.interface%"
   hosts: "%project.hosts%"
   authorized_keys: "%global.authorized_keys%"
-  provision:
-    - type: shell
-      inline: "ifup eth1 || /bin/true"
-      run: always
 
 - nick: uktradeson02
   name: uktradeson02.licensing.service.trade.gov.uk.test
@@ -91,7 +83,3 @@
     interface: "%project.interface%"
   hosts: "%project.hosts%"
   authorized_keys: "%global.authorized_keys%"
-  provision:
-    - type: shell
-      inline: "ifup eth1 || /bin/true"
-      run: always
