@@ -44,10 +44,6 @@
     interface: "%project.interface%"
   hosts: "%project.hosts%"
   authorized_keys: "%global.authorized_keys%"
-  provision:
-    - type: shell
-      inline: "ifup eth1 || /bin/true"
-      run: always
 
 - nick: uktradealb02
   name: uktradealb02.licensing.service.trade.gov.uk.test
@@ -61,13 +57,8 @@
   networks:
   - net: private_network
     type: static
-    ip: 10.100.1.51
+    ip: 10.100.1.6
     mask: 255.255.0.0
     interface: "%project.interface%"
   hosts: "%project.hosts%"
   authorized_keys: "%global.authorized_keys%"
-  provision:
-    - type: shell
-      inline: "ifup eth1 || /bin/true"
-      run: always
-
