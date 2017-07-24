@@ -26,7 +26,7 @@
 
 # These are OpenShift app project variables
 
-box: bis/rhel7
+box: secnix/rhel7
 interface: vboxnet0
 natnet: 192.168.123.0/24
 hosts:
